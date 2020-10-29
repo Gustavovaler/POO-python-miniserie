@@ -1,11 +1,9 @@
 
-
 class Cocinero:
-    def __init__(self, nombre, experiencia):
+    def __init__(self, nombre, experiencia, energia = 100):
         self.nombre = nombre
         self.experiencia = experiencia
+        self.energia = energia
 
-    def __str__(self):
-        return f'Cocinero: {self.nombre} / Experiencia: {self.experiencia}'
-
-    
+    def cocinar(self):
+        pass

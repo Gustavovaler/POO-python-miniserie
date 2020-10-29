@@ -1,31 +1,21 @@
 
 
 class Restaurante:
-
-    def __init__(self, nombre, pedido = None):
+    def __init__(self, nombre, reputacion = 0):
         self.nombre = nombre
-        self.pedido = pedido
-        self.reputacion = 0
+        self.reputacion = reputacion
         self.cocineros = []
 
 
-    def __str__(self):
-        return f'Restaurante: {self.nombre} /  Reputación: {self.reputacion}'
-
-    def recibir_pedido(self):
+    def aceptar_pedido(self):
         pass
 
-    def pedir_pago(self):
+    def cobrar_pedido(self):
         pass
 
     def asignar_cocinero(self):
         pass
 
-    def enviar_pedido(self):
+    def preparar_pedido(self):
         pass
 
-
-
-restaurante = Restaurante('La Farola')
-
-print(restaurante)
