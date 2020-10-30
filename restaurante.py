@@ -7,11 +7,12 @@ class Restaurante:
         self.cocineros = []
 
 
-    def aceptar_pedido(self):
-        pass
+    def aceptar_pedido(self, pedido):
+        self.pedido = pedido
+        print(self.pedido)
 
     def cobrar_pedido(self):
-        pass
+        self.pedido 
 
     def asignar_cocinero(self):
         pass
