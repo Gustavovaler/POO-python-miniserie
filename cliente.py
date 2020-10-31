@@ -12,12 +12,14 @@ class Cliente:
         comida = menu['comidas'][randint(0,3)]
         bebida = menu['bebidas'][randint(0,3)]
         postre = menu['postres'][randint(0,3)]
-        pedido = [comida, bebida, postre]
-        restaurante = Restaurante('Pippo')
-        restaurante.aceptar_pedido(pedido)
-
+        self.pedido = [comida, bebida, postre]
+        self.enviar_pedido()
+        
     def enviar_pedido(self):
-        pass
+        self.restaurante = Restaurante('Pippo')
+        cuenta = self.restaurante.aceptar_pedido(self.pedido)
+        self.cambio = self.restaurante.cobrar_pedido(self.dinero, cuenta)
+
 
     def recibir_pedido(self):
         pass
