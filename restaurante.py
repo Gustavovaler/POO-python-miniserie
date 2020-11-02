@@ -1,11 +1,16 @@
+from random import randint
+from cocinero import Cocinero
 
+cocineros = [
+    Cocinero('Juan', 5),
+    Cocinero('Marcela', 8),
+    Cocinero('Martin', 9),
+]
 
 class Restaurante:
     def __init__(self, nombre, reputacion = 0):
         self.nombre = nombre
         self.reputacion = reputacion
-        self.cocineros = []
-
 
     def aceptar_pedido(self, pedido):
         self.pedido = pedido
@@ -22,10 +27,11 @@ class Restaurante:
             return "Dinero insuficiente"
 
     def preparar_pedido(self):
-        pass
+        self.cocinero = self.asignar_cocinero()
 
 
     def asignar_cocinero(self):
-        pass
+        cocinero = cocineros[randint(0,2)]
+        return cocinero
 
     

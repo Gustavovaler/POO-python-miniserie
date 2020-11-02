@@ -1,4 +1,5 @@
 
+
 class Cocinero:
     def __init__(self, nombre, experiencia, energia = 100):
         self.nombre = nombre
