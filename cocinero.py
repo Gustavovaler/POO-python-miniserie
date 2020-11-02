@@ -6,5 +6,6 @@ class Cocinero:
         self.experiencia = experiencia
         self.energia = energia
 
-    def cocinar(self):
-        pass
+    def cocinar(self, pedido):
+        self.entrega = self.experiencia * self.energia / len(pedido) 
+        return self.entrega

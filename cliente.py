@@ -3,7 +3,7 @@ from menu import menu
 from restaurante import Restaurante
 
 class Cliente:
-    def __init__(self, nombre, distancia, dinero = 600):
+    def __init__(self, nombre, distancia, dinero = 1000):
         self.nombre = nombre
         self.distancia = distancia
         self.dinero = dinero
@@ -25,11 +25,16 @@ class Cliente:
             print("No se pudo realizar la compra por falta de dinero")
         else:
             print(f"Compra pagada, me sobró {self.cambio} pesos")
+            self.recibir_pedido(self.restaurante.preparar_pedido())
 
 
-    def recibir_pedido(self):
-        pass
-
+    def recibir_pedido(self, entrega):
+        if entrega == 300:
+            print('La calidad del restaurante es excelente')
+        elif entrega < 300 and entrega >= 150:
+            print('La calidad del restaurante es regular')
+        else:
+            print('La calidad del restaurante es mala')
 
 cliente = Cliente('Gustavo', 0)
 cliente.elegir_menu()

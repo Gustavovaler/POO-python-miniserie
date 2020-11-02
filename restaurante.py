@@ -27,7 +27,10 @@ class Restaurante:
             return "Dinero insuficiente"
 
     def preparar_pedido(self):
-        self.cocinero = self.asignar_cocinero()
+        self.cocinero = self.asignar_cocinero()        
+        print(f'El cocinero asignado es {self.cocinero.nombre} y tiene {self.cocinero.experiencia} de experiencia')
+        self.entrega = self.cocinero.cocinar(self.pedido)
+        return self.entrega
 
 
     def asignar_cocinero(self):
